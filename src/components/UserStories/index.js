@@ -1,5 +1,5 @@
 import {Component} from 'react'
-import {Cookies} from 'js-cookie'
+import Cookies from 'js-cookie'
 import UserStory from '../UserStory'
 
 class UserStories extends Component {
@@ -24,7 +24,7 @@ class UserStories extends Component {
     const response = await fetch(url, options)
     if (response.ok === true) {
       const fetchedData = await response.json()
-      const updatedData = fetchedData.UserStories.map(story => ({
+      const updatedData = fetchedData.users_stories.map(story => ({
         userId: story.user_id,
         userName: story.user_name,
         storyUrl: story.story_url,
