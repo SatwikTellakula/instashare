@@ -10,6 +10,10 @@ import {Component} from 'react'
 import Cookies from 'js-cookie'
 
 class Post extends Component {
+  state = {
+    isLiked: false,
+  }
+
   toggleLike = async () => {
     await this.setState(prevState => ({isLiked: !prevState.isLiked}))
 
